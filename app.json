@@ -1,0 +1,40 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/more/more",
+    "pages/tells/tells",
+    "pages/detail/detail",
+    "pages/updata/updata",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#333333",
+    "navigationBarTitleText": "晴天手记",
+    "navigationBarTextStyle":"#ffffff",
+    "enablePullDownRefresh":true
+  },
+  "tabBar":{
+    "borderStyle": "black",
+    "list":[
+      {
+        "pagePath":"pages/index/index",
+        "text":"首页",
+        "iconPath":"images/sunny.png",
+        "selectedIconPath":"images/sunny_active.png"
+      },
+      {
+        "pagePath": "pages/more/more",
+        "text": "更多",
+        "iconPath": "images/search_one.png",
+        "selectedIconPath": "images/search_active.png"
+      },
+      {
+        "pagePath": "pages/tells/tells",
+        "text": "关于",
+        "iconPath": "images/index.png",
+        "selectedIconPath": "images/index_active.png"
+      }
+    ]
+  }
+}
