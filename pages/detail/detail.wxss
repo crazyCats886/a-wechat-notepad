@@ -1,0 +1,115 @@
+/* pages/detail/detail.wxss */
+page{
+  background: #f8f8f8;
+  padding-bottom: 30rpx;
+}
+
+button{
+  margin: 0;
+  padding:0;
+}
+
+.container{
+  padding: 0;
+  width: 750rpx;
+}
+
+.search_box,.avatar,.content{
+  width: 661rpx;
+}
+
+/**
+*记事内容详情
+*/
+.content{
+  box-sizing: border-box;
+  border: 1rpx solid #b6b6b6;
+  border-radius: 10rpx;
+  padding:0 24rpx;
+  margin-top: 25rpx;
+  background: #ffffff;
+}
+
+.content_tags{
+  width: 608rpx;
+  height: 65rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.summary_tags{
+  display: flex;
+  height: 65rpx;
+  align-items: center;
+  justify-content: center;
+}
+
+.summary{
+  padding-left: 8rpx;
+  padding-right: 22rpx;
+  height: 38rpx;
+  border-radius: 10rpx;
+  background: #8495a1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 15rpx;
+}
+
+.summary text{
+  font-size: 22rpx;
+  color: #ffffff;
+  margin-left: 6rpx;
+}
+
+.important_tag,.important_tag image{
+  width: 62rpx;
+  height: 64rpx;
+}
+
+.important_tag{
+  margin-top: -1rpx;
+}
+
+.content_text{
+  margin: 20rpx 0;
+}
+
+.content_text text{
+  font-size: 25rpx;
+  color: #8495a1;
+}
+
+.content_img image{
+  width: 611rpx;
+}
+
+.date_record{
+  width: 611rpx;
+  height: 75rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10rpx;
+}
+
+.date text{
+  font-size: 25rpx;
+  color: #1bbc9b;
+}
+
+.record{
+  width: 248rpx;
+  height: 50rpx;
+  border-radius: 10rpx;
+  font-size: 22rpx;
+  outline: none;
+  color: #1bbc9b;
+  background: #dcdcdc;
+  line-height: 50rpx;
+}
+
+.record_hover{
+  background: #eeeeee;
+}

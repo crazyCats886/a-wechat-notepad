@@ -1,0 +1,45 @@
+<!--pages/detail/detail.wxml-->
+<!--index.wxml-->
+<view class="container">
+  <!--模板-->
+  <block>
+    <view class='content'>
+    <view class='content_tags'>
+      <view class='summary_tags'>
+        <block wx:for='{{pageData.tags}}' wx:key='index'>
+          <view class='summary'>
+          <text>● {{item}}</text>
+        </view>
+        </block>
+      </view>
+      <view class='important_tag' wx:if='{{pageData.tagLevel==2}}'>
+        <image src='../../images/quickly.png'></image>
+      </view>
+      <view class='important_tag' wx:elif='{{pageData.tagLevel==1}}'>
+        <image src='../../images/important.png'></image>
+      </view>
+      <view class='important_tag' wx:else>
+        <image src='../../images/lower.png'></image>
+      </view>
+    </view>
+    <view class='content_text'>
+      <text>{{pageData.shortDes}}</text>
+    </view>
+    <view class='content_img'>
+      <block wx:if='{{pageData.uploadImgs.length <= 0}}'>
+        <image src='../../images/blank.png' style='height:366rpx;width:611rpx;'></image>
+      </block>
+      <block wx:if='{{pageData.uploadImgs.length > 0}}' wx:for='{{pageData.uploadImgs}}' wx:key='index'>
+        <image id='{{item}}' catchtap='previewImgs' src='{{item}}' style='width:611rpx;'></image>
+      </block>
+    </view>
+    <view class='date_record'>
+      <view class='date'>
+        <text>{{pageData.uploadTime}}</text>
+      </view>
+      <button class='record' hover-class='record_hover' catchtap='playRecord'>播放语音</button>
+    </view>
+  </view>
+  </block>
+</view>
+

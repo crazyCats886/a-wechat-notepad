@@ -1,0 +1,105 @@
+<!--pages/more/more.wxml-->
+<view class='container'>
+  <!--实例nowMonth-->
+  <view class='register_list' wx:if='{{nowMonth.content.length>0}}'>
+    <view class='list_month'>
+      <text class='list_num'>{{nowMonth.month}}</text>
+      <text class='list_text'>month</text>
+    </view>
+    <view class='list_main'>
+      <block wx:for='{{nowMonth.content}}' wx:key='index' wx:for-index='index'>
+        <view class='list_one' catchtap='goDetail' id='{{nowMonth.month+","+index}}'>
+        <view class='list_day'>
+          <text>{{item.day}}</text>
+        </view>
+        <view class='list_summary'>
+          <text wx:if='{{item.shortDes !=""}}'>┏ {{item.shortDes}} ┓</text>
+          <text wx:elif='{{item.shortDes =="" && item.tags.length != 0}}'>┏ {{item.tags}} ┓</text>
+          <text wx:else>未添加描述或标签</text>
+        </view>
+      </view>
+      </block>
+    </view>
+  </view>
+  <!--实例lastMonth-->
+  <view class='register_list' wx:if='{{lastMonth.content.length>0}}'>
+    <view class='list_month'>
+      <text class='list_num'>{{lastMonth.month}}</text>
+      <text class='list_text'>month</text>
+    </view>
+    <view class='list_main'>
+      <block wx:for='{{lastMonth.content}}' wx:for-index='index' wx:key='index'>
+        <view class='list_one' catchtap='goDetail' id='{{lastMonth.month+","+index}}'>
+        <view class='list_day'>
+          <text>{{item.day}}</text>
+        </view>
+        <view class='list_summary'>
+          <text wx:if='{{item.shortDes !=""}}'>┏ {{item.shortDes}} ┓</text>
+          <text wx:elif='{{item.shortDes =="" && item.tags.length != 0}}'>┏ {{item.tags}} ┓</text>
+          <text wx:else>未添加描述或标签</text>
+        </view>
+      </view>
+      </block>
+    </view>
+  </view>
+  <!--实例beforeLastMonth-->
+  <view class='register_list' wx:if='{{beforeLastMonth.content.length>0}}'>
+    <view class='list_month'>
+      <text class='list_num'>{{beforeLastMonth.month}}</text>
+      <text class='list_text'>month</text>
+    </view>
+    <view class='list_main'>
+      <block wx:for='{{beforeLastMonth.content}}' wx:for-index='index' wx:key='index'>
+        <view class='list_one' catchtap='goDetail' id='{{beforeLastMonth.month+","+index}}'>
+        <view class='list_day'>
+          <text>{{item.day}}</text>
+        </view>
+        <view class='list_summary'>
+          <text wx:if='{{item.shortDes !=""}}'>┏ {{item.shortDes}} ┓</text>
+          <text wx:elif='{{item.shortDes =="" && item.tags.length != 0}}'>┏ {{item.tags}} ┓</text>
+          <text wx:else>未添加描述或标签</text>
+        </view>
+      </view>
+      </block>
+    </view>
+  </view>
+  <!--展示实例-->
+  <view class='register_list'>
+    <view class='list_month'>
+      <text class='list_num'>10</text>
+      <text class='list_text'>month</text>
+    </view>
+    <view class='list_main'>
+      <block>
+        <view class='list_one' catchtap='goDetail'>
+          <view class='list_day'>
+            <text>10</text>
+          </view>
+          <view class='list_summary'>
+            <text>┏ 明天需要把会议需要的资料准备好 ┓</text>
+          </view>
+        </view>
+      </block>
+      <block>
+        <view class='list_one' catchtap='goDetail'>
+          <view class='list_day'>
+            <text>18</text>
+          </view>
+          <view class='list_summary'>
+            <text>┏ 猫粮又吃完了 ┓</text>
+          </view>
+        </view>
+      </block>
+      <block>
+        <view class='list_one' catchtap='goDetail'>
+          <view class='list_day'>
+            <text>20</text>
+          </view>
+          <view class='list_summary'>
+            <text>┏ 28号要去参加同学的婚礼，二狗子还让我帮他把礼给殿上，fuck! ┓</text>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

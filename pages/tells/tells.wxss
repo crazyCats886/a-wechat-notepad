@@ -1,0 +1,83 @@
+/* pages/tells/tells.wxss */
+page{
+  height: 100%;
+  width: 100%;
+  background: #f8f8f8;
+  font-family: '微软雅黑'
+}
+
+.box{
+  width: 750rpx;
+}
+
+/* 声明部分 */
+.statement{
+  margin-top:70rpx;
+  display: flex;
+  justify-content: center;
+
+}
+
+.state_box{
+  width: 716rpx;
+  box-sizing: border-box;
+  padding:30rpx;
+  border: 1rpx solid #b6b6b6;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 10rpx;
+}
+
+.state_header{
+  font-size: 30rpx;
+  font-weight: bold;
+  margin-bottom: 15rpx;
+  color: #1bbc9b;
+}
+
+.state_content{
+  font-size: 24rpx;
+  color: #999;
+  line-height: 1.5;
+}
+
+.message{
+  width: 656rpx;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15rpx;
+}
+
+.message_box{
+  width: 328rpx;
+  height: 115rpx;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.message_content{
+  height: 78rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.message_content text{
+  font-size: 18rpx;
+  color: #999999;
+}
+
+.message_content .name{
+  font-size: 24rpx;
+}
+
+.cat{
+  margin-top: 45rpx;
+  width: 716rpx;
+  display: flex;
+  justify-content: space-around;
+}

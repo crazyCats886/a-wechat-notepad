@@ -1,0 +1,77 @@
+/* pages/more/more.wxss */
+page{
+  background: #f8f8f8;
+}
+
+button{
+  margin: 0;
+  padding:0;
+}
+
+.container{
+  padding: 0;
+  width: 750rpx;
+}
+
+.register_list{
+  margin-top: 30rpx;
+  width: 661rpx;
+  background: #1bbc9b;
+  border-radius: 12rpx;
+  box-sizing: border-box;
+  padding: 18rpx;
+}
+
+.list_month{
+  margin-bottom: 30rpx;
+  color: #fff;
+}
+
+.list_num{
+  font-family: '黑体';
+  font-size: 72rpx;
+}
+
+.list_text{
+  font-size: 48rpx;
+}
+
+.list_one{
+  width: 626rpx;
+  background: #fff;
+  height: 68rpx;
+  display: flex;
+  margin-bottom: 16rpx;
+}
+
+.list_day{
+  height: 68rpx;
+  width: 82rpx;
+  background: #858585;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list_day text{
+  font-size: 60rpx;
+  color: #fff;
+}
+
+.list_summary{
+  height: 68rpx;
+  width: 540rpx;
+  box-sizing: border-box;
+  padding: 0 15rpx;
+  display: flex;
+  align-items: center;
+}
+
+.list_summary text{
+  width: 540rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  font-size: 25rpx;
+  color: #8495a1;
+}

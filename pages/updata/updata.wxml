@@ -1,0 +1,70 @@
+<!--pages/updata/updata.wxml-->
+<view class='container'>
+  <view class='text'>
+    <textarea bindblur='textareaChange' maxlength='-1' placeholder='简短描述下要干哈！^_^'></textarea>
+  </view>
+  <view class='pics'>
+    <block wx:for='{{uploadImgs}}' wx:for-index='index' wx:key='index'>
+      <view class='pic_content'>
+        <image catchtap='previewImg' id='{{item}}' src='{{item}}' style='height:131rpx;width:131rpx;'></image>
+        <view class='del' id='{{index}}' catchtap='deleteImage'>
+          <image src='../../images/delete.png' style='height:41rpx;width:64rpx;'></image>
+        </view>
+      </view>
+    </block>
+    <view class='add_tag' catchtap='addPics'>
+        <image src='../../images/plus.png' style='height:60rpx;width:60rpx;'></image>
+    </view>
+  </view>
+  <view class='important'>
+    <radio-group class="radio-group" bindchange="radioChange">
+      <label class="radio" wx:for="{{items}}" wx:key='index'>
+        <radio color='#1bbc9b' value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+      </label>
+    </radio-group>
+  </view>
+  <view class='description'>
+    <view class='search_box'>
+      <input bindblur='tagsChange' maxlength='-1' type='text' class='search_content' placeholder='多个标签用问号分隔，如猫咪？玩具？逗猫棒'></input>
+    </view>
+  </view>
+  <view class='record'>
+    <view class='record_tag' catchtap='showRecord' catchlongpress='startRecord' catchtouchend='touchEnd'>
+      <view class='tag_box'>
+        <button hover-class='tag_hover' plain='true'></button> 
+        <image src='../../images/record.png' style='height:64rpx;width:64rpx;'></image>
+      </view>
+      <text>开始录音</text>
+    </view>
+    <view class='record_tag' catchtap='playRecord'>
+      <view class='tag_box'>
+        <button hover-class='tag_hover' plain='true'></button> 
+        <image src='../../images/play.png' style='height:64rpx;width:64rpx;'></image>
+      </view>
+      <text>播放录音</text>
+    </view>
+    <view class='record_tag' catchtap='deleteRecord'>
+      <view class='tag_box'>
+        <button hover-class='tag_hover' plain='true'></button> 
+        <image src='../../images/record_del.png' style='height:64rpx;width:64rpx;'></image>
+      </view>
+      <text>删除录音</text>
+    </view>
+    <view class='record_tag'>
+      <view class='tag_box'>
+        <button hover-class='tag_hover' plain='true'></button> 
+        <image src='{{recordDes.src}}' style='height:64rpx;width:64rpx;'></image>
+      </view>
+      <text id='record_message_now'>{{recordDes.detail}}</text>
+    </view>
+  </view>
+  <view class='tips'>
+    <view class='tips_content'>
+      <view>Tips:</view>
+      <view>1. 请不要保存任何重要信息，如密码、账号等！(｡˘•ε•˘｡)</view>
+      <view>2. 确认发布后，不可修改（其实是开发者偷懒，没写修改接口）。</view>
+      <view>3. 如果实在想修改，可以删除当前记录，重新发布。</view>
+    </view>
+    <button class='btn' hover-class='tips_hover' catchtap='uploadAllData'>确认发布</button>
+  </view>
+</view>

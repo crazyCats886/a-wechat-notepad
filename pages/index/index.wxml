@@ -1,0 +1,101 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='updata' catchtap='toUpdata'>
+    <button plain='true'>+</button>
+  </view>
+  <view class='avatar'>
+    <view class='avatar_pic'>
+      <image src='../../images/avatar_2.png'></image>
+    </view>
+    <view class='avatar_pic'>
+      <image src='../../images/avatar_1.png'></image>
+    </view>
+    <view class='avatar_pic' id='my_avatar'>
+      <image src='{{avatar}}'></image>
+    </view>
+    <view class='my_nick'>
+      <text>你好！{{myNick}}</text>
+    </view>
+  </view>
+  <!--模板-->
+  <block wx:for='{{pageData}}' wx:for-index='index' wx:key='index'>
+    <view class='content'>
+    <view class='content_tags'>
+      <view class='summary_tags'>
+        <block wx:for='{{item.tags}}' wx:key='index'>
+          <view class='summary'>
+          <text>● {{item}}</text>
+        </view>
+        </block>
+      </view>
+      <view class='important_tag' wx:if='{{item.tagLevel==2}}'>
+        <image src='../../images/quickly.png'></image>
+      </view>
+      <view class='important_tag' wx:elif='{{item.tagLevel==1}}'>
+        <image src='../../images/important.png'></image>
+      </view>
+      <view class='important_tag' wx:else>
+        <image src='../../images/lower.png'></image>
+      </view>
+    </view>
+    <view class='content_text'>
+      <text>━ {{item.shortDes}} ━</text>
+    </view>
+    <view id='{{index}}' class='content_img' bindtap='previewImgs'>
+      <swiper circular='true'>
+        <block wx:if='{{item.uploadImgs.length <= 0}}'>
+          <swiper-item>
+            <image src='../../images/blank.png' style='height:366rpx;width:611rpx;'></image>
+          </swiper-item>
+        </block>
+        <block wx:for='{{item.uploadImgs}}' wx:key='index'>
+          <swiper-item>
+            <image src='{{item}}'></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class='date_record'>
+      <view class='date'>
+        <text>{{item.uploadTime}}</text>
+      </view>
+      <button id='{{index}}' class='record' hover-class='record_hover' catchtap='playRecord'>播放语音</button>
+    </view>
+  </view>
+  </block>
+  <!--模板实例-->
+  <view class='content'>
+    <view class='content_tags'>
+      <view class='summary_tags'>
+        <view class='summary'>
+          <text>● 猫咪</text>
+        </view>
+        <view class='summary'>
+          <text>● 玩具</text>
+        </view>
+      </view>
+      <view class='important_tag'>
+        <image src='../../images/important.png'></image>
+      </view>
+    </view>
+    <view class='content_text'>
+      <text>┏ 给猫咪买玩具，老鼠玩具那种的 ┓</text>
+    </view>
+    <view class='content_img'>
+      <swiper circular='true'>
+        <swiper-item>
+          <image src='../../images/description.png' style='height:366rpx;width:611rpx;'></image>
+        </swiper-item>
+        <swiper-item>
+          <image src='../../images/description.png' style='height:366rpx;width:611rpx;'></image>
+        </swiper-item>
+      </swiper>
+    </view>
+    <view class='date_record'>
+      <view class='date'>
+        <text>2017/11/22-10:35</text>
+      </view>
+      <button class='record' hover-class='record_hover'>播放语音</button>
+    </view>
+  </view>
+</view>

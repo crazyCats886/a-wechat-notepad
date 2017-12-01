@@ -1,0 +1,213 @@
+/* pages/updata/updata.wxss */
+page{
+  background: #f8f8f8;
+}
+
+.container{
+  padding: 0;
+  width: 750rpx;
+}
+
+button{
+  margin: 0;
+  padding:0;
+}
+
+.text,.pics,.record,.description,.important{
+  width: 661rpx;
+  background: #fff;
+}
+
+image{
+  border: none;
+  outline: none;
+}
+
+/**
+*文字图片录入
+*/
+.text{
+  margin-top: 22rpx;
+  box-sizing: border-box;
+  padding: 10rpx;
+}
+
+.text textarea{
+  width: 100%;
+  height: 186rpx;
+  font-size: 25rpx;
+}
+
+.pics{
+  height: 131rpx;
+  margin-top: 20rpx;
+  display: flex;
+  align-items: center;
+  padding: 15rpx 0;
+}
+
+.pic_content{
+  height: 131rpx;
+  width: 131rpx;
+  position: relative;
+  margin-right: 5rpx;
+  margin-left: 8rpx;
+}
+
+.del{
+  height: 41rpx;
+  width: 64rpx;
+  position: absolute;
+  right: 0;
+  top:0;
+  z-index: 10;
+}
+
+.add_tag{
+  height: 60rpx;
+  width: 60rpx;
+  margin-left: 28rpx;
+}
+
+.record{
+  height: 130rpx;
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: space-around;
+}
+
+.record_tag{
+  width:132rpx;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20rpx;
+}
+
+.record_tag text{
+  font-size: 25rpx;
+  color: #979797;
+  text-align: center;
+  margin-top: 10rpx;
+}
+
+.record_ready{
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  margin-left: 300rpx;
+}
+
+.record_ready text{
+  font-size: 25rpx;
+  color: #979797;
+}
+
+#record_message_now{
+  color: #1bbc9b;
+}
+
+.tag_box{
+  position: relative;
+}
+
+.tag_box,.tag_box button{
+  height: 64rpx;
+  width: 64rpx;
+}
+
+.tag_box button{
+  z-index: 10;
+  position: absolute;
+  left: 0;
+  top: 0;
+  outline: none;
+  border: none;
+}
+
+.tag_box .tag_hover{
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/**
+*事务重要程度
+*/
+.important{
+  height: 90rpx;
+  margin-top: 20rpx;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 40rpx;
+}
+
+.important .radio{
+  font-size: 25rpx;
+  color: #515151;
+  margin-right: 15rpx;
+}
+
+/**
+*Tips内容
+*/
+.tips{
+  margin-top: 50rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.tips,.tips_content{
+  width: 661rpx;
+}
+
+.tips_content{
+  font-size: 25rpx;
+  color: #515151;
+  line-height: 40rpx;
+}
+
+.tips .btn{
+  margin-top: 70rpx;
+  width: 192rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-right: 28rpx;
+  border-radius: 8rpx;
+  background: #1bbc9b;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #fff;
+}
+
+.tips_hover{
+  background-color: #31f4cc;
+}
+
+/**
+*多标签输入
+*/
+.description{
+  height: 100rpx;
+  background: #fff;
+  margin-top: 20rpx;
+  display: flex;
+  align-items: center;
+}
+
+.search_box{
+  box-sizing: border-box;
+  height: 62rpx;
+  width: 640rpx;
+  padding-left:40rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search_content{
+  font-size: 25rpx;
+  width: 640rpx;
+}

@@ -1,0 +1,22 @@
+<!--pages/tells/tells.wxml-->
+<view class='statement box'>
+  <view class='state_box'>
+    <text class='state_header'>关于应用的相关说明</text>
+    <text class='state_content'>本应用由那谁谁制作，虽然还可以做的更好，但实在做的蛋疼菊紧，到此作罢。如果你有任何建议或意见，请通过邮件发送给我，反正也不会改，哈哈O(∩_∩)O，贱萌贱萌的。
+本应用为个人作品，不用于任何商业用途，所以大家可以放心使用。强调一句，请不要在应用中保存任何非常重要的信息，比如账号、密码、燕皂啥的，仅用于日常工作、生活事务管理。因为开发者是个穷B，一百块都没有，用不起阿里云啥高档货，服务器和数据库都使用的开源免费产品，数据稳定性不敢保证，见谅见谅！
+鉴于数据库的容量只有10G，最多保存近3个月的数据资料，过期资料会定期删除，请及时保存你需要的信息。</text>
+    <view class='message'>
+      <view class='message_box'>
+        <image src='../../images/message_avatar.png' style='width:90rpx;height:90rpx;'></image>
+        <view class='message_content'>
+          <text class='name'>Zhang Kang</text>
+          <text>1072649980@qq.com</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='cat'>
+  <image src='../../images/cat.png' style='height:128rpx;width:128rpx;'></image>
+  <image src='../../images/cat_run.png' style='height:128rpx;width:128rpx;'></image>
+</view>
